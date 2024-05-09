@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useRouter } from "next/router";
 import Nav from "../Nav";
 import Hero from "../sections/Hero";
-import About from "../sections/About";
+import About from "../sections/About/About";
 
 const Layout = () => {
   const router = useRouter();
@@ -17,17 +17,17 @@ const Layout = () => {
   return (
     <>
       <Nav scrollToRef={scrollToRef} />
-      <main style={{
-        padding: "0 150px"
-      }}>
+      <main
+        style={{
+          padding: "0 150px",
+        }}
+      >
         <div ref={heroRef}>
           <Hero />
         </div>
         <div ref={aboutRef}>
-          {/* <About /> */}
-          <Hero />
+          <About />
         </div>
-
       </main>
     </>
   );
