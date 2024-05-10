@@ -1,4 +1,69 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
+const StyledSection = styled.section`
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  padding-top: var(--nav-height);
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: inherit;
+  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+    height: auto;
+    padding-top: var(--nav-height);
+  }
+
+  h1 {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+
+    @media (max-width: 1080px) {
+      margin: 0px 0px 30px 4px;
+    }
+    @media (max-width: 480px) {
+      margin: 0px 0px 20px 2px;
+    }
+  }
+
+  h3 {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+    margin-top: 5px;
+    color: var(--slate);
+    line-height: 0.9;
+    font-weight: 600;
+  }
+
+  h2 {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+  }
+  a {
+    display: inline-block;
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fz-sm);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: 50px;
+  }
+`;
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -25,67 +90,33 @@ const Hero = () => {
     alignItems: "flex-start",
     justifyContent: "center",
     minHeight: "100vh",
-    height: "100vh",
     padding: "0",
     paddingTop: "var(--nav-height)",
     maxWidth: "1000px",
     margin: "0 auto",
     top: `-${sectionTop}px`,
-    boxSizing:"inherit"
-  };
-
-  const h1Style = {
-    margin: "0 0 20px 4px",
-    color: "var(--green)",
-    fontFamily: "var(--font-mono)",
-    fontSize: "var(--fz-xl)",
-    fontWeight: 400,
-  };
-
-  const h3Style = {
-    marginTop: "5px",
-    color: "var(--slate)",
-    lineHeight: "0.95",
-    fontSize: "4vw",
-    fontWeight: "600",
+    boxSizing: "inherit",
   };
 
   const pStyle = {
     margin: "20px 0 0",
     maxWidth: "540px",
-    color: "var(--slate)",
   };
 
-  const emailLinkStyle = {
-    display: "inline-block",
-    textDecoration: "none",
-    padding: "1rem 2rem",
-    color: "var(--green)",
-    marginTop: "50px",
-    backgroundColor: "transparent",
-    border: "1px solid var(--green)",
-    borderRadius: "var(--border-radius)",
-  };
+  // const emailLinkStyle = {
+  //   display: "inline-block",
+  //   textDecoration: "none",
+  //   padding: "1rem 2rem",
+  //   color: "var(--green)",
+  //   marginTop: "50px",
+  //   backgroundColor: "transparent",
+  //   border: "1px solid var(--green)",
+  //   borderRadius: "var(--border-radius)",
+  // };
 
-  const one = <h1 style={h1Style}>Hi, my name is</h1>;
-  const two = (
-    <h2
-      style={{
-        margin: "0px",
-        fontSize: "4vw",
-        fontWeight: "600",
-        color: "var(--lightest-slate)",
-        lineHeight: "1.1",
-      }}
-    >
-      Kavish Shah.
-    </h2>
-  );
-  const three = (
-    <h3 style={h3Style} className="big-heading">
-      I build things for the web.
-    </h3>
-  );
+  const one = <h1>Hi, my name is</h1>;
+  const two = <h2>Kavish Shah.</h2>;
+  const three = <h3>I build things for the web.</h3>;
   const four = (
     <p style={pStyle}>
       I’m a software engineer building (and occasionally designing) exceptional
@@ -100,10 +131,9 @@ const Hero = () => {
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="/resume.pdf"
       target="_blank"
       rel="noreferrer"
-      style={emailLinkStyle}
     >
       Check out my Resume!
     </a>
@@ -112,13 +142,13 @@ const Hero = () => {
   const items = [one, two, three, four, five];
 
   return (
-    <section style={styles}>
+    <StyledSection>
       {items.map((item, i) => (
         <div key={i} style={{ transitionDelay: `${i + 1}00ms` }}>
           {item}
         </div>
       ))}
-    </section>
+    </StyledSection>
   );
 };
 

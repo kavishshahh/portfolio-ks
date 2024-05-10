@@ -15,6 +15,10 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
+
+  @media (max-width: 480px) {
+    font-size: var(--fz-lg);
+  }
 }
 
 :root {
@@ -60,4 +64,9 @@ body {
 }
 a {
   letter-spacing: 0.1em;
+}
+
+p {
+  line-height: 1.3;
+  font-size: var(--fz-xl);
 }

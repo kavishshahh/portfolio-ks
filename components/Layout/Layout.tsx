@@ -4,6 +4,18 @@ import { useRouter } from "next/router";
 import Nav from "../Nav";
 import Hero from "../sections/Hero";
 import About from "../sections/About/About";
+import Experience from "../sections/Experience";
+import styled from "styled-components";
+import Projects from "../sections/Projects";
+
+const MainStyle = styled.main`
+  @media (max-width: 1080px) {
+    padding: 0 150px;
+  }
+  @media (max-width: 770px) {
+    padding: 0 50px;
+  }
+`;
 
 const Layout = () => {
   const router = useRouter();
@@ -17,18 +29,20 @@ const Layout = () => {
   return (
     <>
       <Nav scrollToRef={scrollToRef} />
-      <main
-        style={{
-          padding: "0 150px",
-        }}
-      >
+      <MainStyle>
         <div ref={heroRef}>
           <Hero />
         </div>
         <div ref={aboutRef}>
           <About />
         </div>
-      </main>
+        <div ref={aboutRef}>
+          <Experience />
+        </div>
+        <div ref={aboutRef}>
+          <Projects />
+        </div>
+      </MainStyle>
     </>
   );
 };
