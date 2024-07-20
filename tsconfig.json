@@ -16,6 +16,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/menu/Menu.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/menu/Menu.js", "components/sections/Experience/Experience.jsx"],
   "exclude": ["node_modules"]
 }

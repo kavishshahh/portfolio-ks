@@ -3,10 +3,10 @@ import React, { useRef } from "react";
 import { useRouter } from "next/router";
 import Nav from "../Nav/Nav";
 import About from "../sections/About/About";
-import Experience from "../sections/Experience/Experience";
 import Projects from "../sections/Projects/Projects";
 import styles from "./Layout.module.css";
 import Hero from "../sections/Hero/Hero";
+import Experience from "../sections/Experience/Experience";
 
 const Layout = () => {
   const router = useRouter();
@@ -16,8 +16,6 @@ const Layout = () => {
   const projectsRef = useRef(null);
 
   const scrollToRef = (ref: any) => {
-    console.log("ref", ref.current);
-
     if (ref && ref.current) {
       window.scrollTo({
         top: ref.current.offsetTop,
