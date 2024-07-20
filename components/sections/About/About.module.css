@@ -1,0 +1,78 @@
+/* About.module.css */
+
+.styledAbout h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+}
+
+.styledAbout h2::before {
+  position: relative;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+.styledAbout h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+
+.styledSection {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: block;
+  unicode-bidi: isolate;
+  max-width: 900px;
+}
+
+.styledP p {
+  padding: 0 0 10px;
+}
+
+.styledText .skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-gap: 0 10px;
+  padding: 0;
+  margin: 20px 0 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.styledText .skills li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+
+.styledText .skills li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 12px;
+}

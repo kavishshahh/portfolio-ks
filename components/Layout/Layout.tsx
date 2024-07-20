@@ -1,21 +1,12 @@
 // components/Layout.js
 import React, { useRef } from "react";
 import { useRouter } from "next/router";
-import Nav from "../Nav";
-import Hero from "../sections/Hero";
+import Nav from "../Nav/Nav";
 import About from "../sections/About/About";
-import Experience from "../sections/Experience";
-import styled from "styled-components";
-import Projects from "../sections/Projects";
-
-const MainStyle = styled.main`
-  @media (max-width: 1080px) {
-    padding: 0 150px;
-  }
-  @media (max-width: 770px) {
-    padding: 0 50px;
-  }
-`;
+import Experience from "../sections/Experience/Experience";
+import Projects from "../sections/Projects/Projects";
+import styles from "./Layout.module.css";
+import Hero from "../sections/Hero/Hero";
 
 const Layout = () => {
   const router = useRouter();
@@ -29,7 +20,7 @@ const Layout = () => {
   return (
     <>
       <Nav scrollToRef={scrollToRef} />
-      <MainStyle>
+      <main className={styles.main}>
         <div ref={heroRef}>
           <Hero />
         </div>
@@ -42,7 +33,7 @@ const Layout = () => {
         <div ref={aboutRef}>
           <Projects />
         </div>
-      </MainStyle>
+      </main>
     </>
   );
 };

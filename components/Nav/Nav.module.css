@@ -1,0 +1,83 @@
+.mainContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+  z-index: 2;
+  opacity: 0.9;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+
+  @media screen and (max-width: 770px) {
+    padding: 0 20px;
+  }
+}
+
+.NavLinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.LogoLink {
+  text-decoration: none;
+  font-size: var(--fz-lg);
+  font-weight: bold;
+
+  @media screen and (max-width: 770px) {
+    font-size: var(--fz-md);
+  }
+}
+
+.NavList {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  color: var(--lightest-slate);
+
+  @media (max-width: 770px) {
+    display: none;
+  }
+}
+
+.NavListItem {
+  margin: 0 5px;
+  position: relative;
+  font-size: var(--fz-xs);
+  padding: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.NavLink {
+  position: relative;
+  transition: var(--transition);
+}
+
+.ResumeButton {
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  transition: var(--transition);
+  margin-left: 15px;
+  font-size: var(--fz-xs);
+
+  &:hover {
+    background-color: var(--green);
+    color: var(--navy);
+  }
+}

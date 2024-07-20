@@ -1,0 +1,194 @@
+/* Menu.module.css */
+
+.styledMenu {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.styledHamburgerButton {
+  /* display: none; */
+
+  @media (max-width: 768px) {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right: -15px;
+    padding: 15px;
+    border: 0px;
+    background-color: transparent;
+    color: inherit;
+    text-transform: none;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+  }
+}
+
+.hamBox {
+  display: inline-block;
+  position: relative;
+  width: var(--hamburger-width);
+  height: 24px;
+}
+
+.hamBoxInner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: var(--hamburger-width);
+  height: 2px;
+  border-radius: var(--border-radius);
+  background-color: var(--green);
+  transition-duration: 0.22s;
+  transition-property: transform;
+}
+
+.hamBoxInnerOpen {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamBoxInnerClose {
+  transform: rotate(0deg);
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamBoxInner::before,
+.hamBoxInner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  right: 0;
+  width: var(--hamburger-width);
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--green);
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+}
+
+.hamBoxInner::before {
+  width: 120%;
+  top: -10px;
+  opacity: 1;
+}
+
+.hamBoxInnerOpen::before {
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  transition: var(--ham-before-active);
+}
+
+.hamBoxInner::after {
+  width: 80%;
+  bottom: -10px;
+  transform: rotate(0);
+}
+
+.hamBoxInnerOpen::after {
+  width: 100%;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: var(--ham-after-active);
+}
+
+.styledSidebar {
+  display: none;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0;
+    background-color: var(--light-navy);
+    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    z-index: 9;
+    transition: var(--transition);
+  }
+}
+
+.styledSidebarOpen {
+  transform: translateX(0);
+  visibility: visible;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding: 50px 10px;
+  width: min(75vw, 400px);
+  height: 100vh;
+  outline: 0px;
+  background-color: var(--light-navy);
+  box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+  z-index: 9;
+  transform: translateX(0vw);
+  visibility: visible;
+  transition: var(--transition);
+}
+
+.styledSidebarClose {
+  transform: translateX(100vw);
+  visibility: hidden;
+}
+
+.nav {
+  width: 100%;
+  flex-direction: column;
+  color: var(--lightest-slate);
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.li {
+  position: relative;
+  margin: 0 auto 20px;
+  counter-increment: item 1;
+  font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+}
+
+.li::before {
+  content: "0" counter(item) ".";
+  display: block;
+  margin-bottom: 5px;
+  color: var(--green);
+  font-size: var(--fz-sm);
+}
+
+.a {
+  width: 100%;
+  padding: 3px 20px 20px;
+}
+
+.resumeLink {
+  padding: 18px 50px;
+  margin: 10% auto 0;
+  width: max-content;
+}

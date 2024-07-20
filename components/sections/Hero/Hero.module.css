@@ -1,0 +1,80 @@
+/* Hero.module.css */
+
+.heroSection {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    padding-top: var(--nav-height);
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: inherit;
+  }
+  
+  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+    .heroSection {
+      height: auto;
+      padding-top: var(--nav-height);
+    }
+  }
+  
+  .heroSection h1 {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  }
+  
+  @media (max-width: 1080px) {
+    .heroSection h1 {
+      margin: 0 0 30px 4px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroSection h1 {
+      margin: 0 0 20px 2px;
+    }
+  }
+  
+  .heroSection h3 {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+    margin-top: 5px;
+    color: var(--slate);
+    line-height: 0.9;
+    font-weight: 600;
+  }
+  
+  .heroSection h2 {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+  }
+  
+  .heroSection a {
+    display: inline-block;
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fz-sm);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: 50px;
+  }
+  
+  .pStyle {
+    margin: 20px 0 0;
+    max-width: 540px;
+  }
+  
