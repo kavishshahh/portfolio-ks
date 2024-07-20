@@ -77,11 +77,8 @@ const HamboxInner = styled.div`
   }
 `;
 
-const Nav = ({ scrollToRef }: { scrollToRef: any }) => {
+const Nav = ({ scrollToRef, refs }: { scrollToRef: any; refs: any }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const handleNavClick = (ref: any) => {
-    scrollToRef(ref);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -109,9 +106,25 @@ const Nav = ({ scrollToRef }: { scrollToRef: any }) => {
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // Ensure overflow is reset on component unmount
+      document.body.style.overflow = "auto";
     };
   }, [isMobileMenuOpen]);
+
+  const handleScrollToSection = (url: any) => {
+    switch (url) {
+      case "#about":
+        scrollToRef(refs.aboutRef);
+        break;
+      case "#jobs":
+        scrollToRef(refs.experienceRef);
+        break;
+      case "#projects":
+        scrollToRef(refs.projectsRef);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <>
@@ -127,7 +140,10 @@ const Nav = ({ scrollToRef }: { scrollToRef: any }) => {
                   <a
                     href={url}
                     className={styles.NavLink}
-                    onClick={() => handleNavClick(url)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScrollToSection(url);
+                    }}
                   >
                     <span
                       style={{

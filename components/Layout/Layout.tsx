@@ -10,16 +10,32 @@ import Hero from "../sections/Hero/Hero";
 
 const Layout = () => {
   const router = useRouter();
-  const aboutRef = useRef(null);
   const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
 
   const scrollToRef = (ref: any) => {
-    window.scrollTo(0, ref.current.offsetTop);
+    console.log("ref", ref.current);
+
+    if (ref && ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const refs = {
+    heroRef,
+    aboutRef,
+    experienceRef,
+    projectsRef,
   };
 
   return (
     <>
-      <Nav scrollToRef={scrollToRef} />
+      <Nav scrollToRef={scrollToRef} refs={refs} />
       <main className={styles.main}>
         <div ref={heroRef}>
           <Hero />
@@ -27,10 +43,10 @@ const Layout = () => {
         <div ref={aboutRef}>
           <About />
         </div>
-        <div ref={aboutRef}>
+        <div ref={experienceRef}>
           <Experience />
         </div>
-        <div ref={aboutRef}>
+        <div ref={projectsRef}>
           <Projects />
         </div>
       </main>
