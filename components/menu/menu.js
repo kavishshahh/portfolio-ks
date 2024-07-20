@@ -56,9 +56,16 @@ const Menu = () => {
                 ))}
               </ol>
             )}
-            <a href="/resume.pdf" className={styles.resumeLink}>
-              Resume
-            </a>
+            <div className={styles.resumeLink}>
+              <a
+                href="resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ResumeButton}
+              >
+                Resume
+              </a>
+            </div>
           </nav>
         </aside>
       </div>

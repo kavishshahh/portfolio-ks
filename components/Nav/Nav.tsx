@@ -143,7 +143,7 @@ const Nav = ({ scrollToRef }: { scrollToRef: any }) => {
             </ol>
             <div>
               <a
-                href="/resume.pdf"
+                href="resume.pdf"
                 target="_blank"
                 className={styles.ResumeButton}
                 rel="noopener noreferrer"

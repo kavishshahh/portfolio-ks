@@ -153,6 +153,11 @@
 }
 
 .nav {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
   width: 100%;
   flex-direction: column;
   color: var(--lightest-slate);
@@ -188,7 +193,25 @@
 }
 
 .resumeLink {
+  margin: 10% auto 0px;
+}
+
+.ResumeButton {
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: var(--fz-xs);
   padding: 18px 50px;
-  margin: 10% auto 0;
+  margin: 10% auto 0px;
   width: max-content;
+
+  &:hover {
+    background-color: var(--green);
+    color: var(--navy);
+  }
 }
