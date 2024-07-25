@@ -11,8 +11,9 @@ const Experience = () => {
       company: "Ring",
       date: "Jul 2024 - Present",
       responsibilities: [
-        "Add various features for the Web portal.",
-        "Convert Figma design to pixel perfect UI and integrate API's.",
+        `Developed and maintained advanced infrastructure tools using React.js, ensuring industry-standard compliance. Proficient in
+        React.js, Redux, and front-end development`,
+        "Developed various components and features of frontend by understanding the design and fixing bugs.",
       ],
     },
     ring2: {
