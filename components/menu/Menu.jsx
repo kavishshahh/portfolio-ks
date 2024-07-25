@@ -7,7 +7,7 @@ import styles from "./Menu.module.css";
 
 const Menu = (props) => {
   const { handleScrollToSection } = props;
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 

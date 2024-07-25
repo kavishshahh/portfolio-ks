@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { navLinks } from "../../src/config";
-import Menu from "../menu/Menu";
 import styles from "./Nav.module.css";
-
+import Menu from "../menu/Menu";
 
 const Nav = ({ scrollToRef, refs }: { scrollToRef: any; refs: any }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -100,7 +99,7 @@ const Nav = ({ scrollToRef, refs }: { scrollToRef: any; refs: any }) => {
           </div>
         ) : (
           <div>
-            <Menu handleScrollToSection={handleScrollToSection}/>
+            <Menu handleScrollToSection={handleScrollToSection} />
           </div>
         )}
       </div>
