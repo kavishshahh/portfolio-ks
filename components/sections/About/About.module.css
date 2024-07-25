@@ -44,7 +44,6 @@
   display: block;
   unicode-bidi: isolate;
   max-width: 900px;
-  height: 100vh;
 }
 
 .styledP p {

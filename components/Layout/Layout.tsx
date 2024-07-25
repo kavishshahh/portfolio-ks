@@ -3,10 +3,11 @@ import React, { useRef } from "react";
 import { useRouter } from "next/router";
 import Nav from "../Nav/Nav";
 import About from "../sections/About/About";
-import Projects from "../sections/Projects/Projects";
 import styles from "./Layout.module.css";
 import Hero from "../sections/Hero/Hero";
 import Experience from "../sections/Experience/Experience";
+import Projects from "../sections/Projects/Projects";
+import Contact from "../sections/Contact/Contact";
 
 const Layout = () => {
   const router = useRouter();
@@ -14,6 +15,7 @@ const Layout = () => {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToRef = (ref: any) => {
     if (ref && ref.current) {
@@ -29,6 +31,7 @@ const Layout = () => {
     aboutRef,
     experienceRef,
     projectsRef,
+    contactRef,
   };
 
   return (
@@ -46,6 +49,9 @@ const Layout = () => {
         </div>
         <div ref={projectsRef}>
           <Projects />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
         </div>
       </main>
     </>

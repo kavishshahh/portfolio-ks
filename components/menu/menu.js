@@ -5,7 +5,9 @@ import { navLinks } from "@/config";
 import Link from "next/link";
 import styles from "./Menu.module.css";
 
-const Menu = () => {
+const Menu = (props) => {
+  const { handleScrollToSection } = props;
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -47,7 +49,11 @@ const Menu = () => {
                   <li key={i} className={styles.li}>
                     <Link
                       href={url}
-                      onClick={() => setMenuOpen(false)}
+                      onClick={(e) => {
+                        setMenuOpen(false);
+                        e.preventDefault();
+                        handleScrollToSection(url);
+                      }}
                       className={styles.a}
                     >
                       {name}

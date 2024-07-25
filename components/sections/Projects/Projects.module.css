@@ -10,7 +10,7 @@
   padding: 100px 0;
   display: block;
   unicode-bidi: isolate;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .head {
@@ -44,4 +44,122 @@
   height: 1px;
   margin-left: 20px;
   background-color: var(--lightest-navy);
+}
+
+/* .projectList {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.projectImage {
+  grid-column: 1/8;
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: var(--transition);
+  grid-area: 1 / 6 / -1 / -1;
+  position: relative;
+  z-index: 1;
+}
+
+.projectContent {
+  grid-column: 7 / -1;
+  text-align: right;
+  position: relative;
+  grid-area: 1 / 1 / -1 / 7;
+} */
+
+.projectsSection {
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+
+  @media (max-width: 770px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectCard {
+  /* background-color: #29335d; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+/* .projectCard:hover {
+  transform: translateY(-5px);
+} */
+.projectImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: #353c53;
+}
+
+.projectImage img {
+  width: 100%;
+}
+
+.imageA {
+  width: 85%;
+  transform: translateY(-5px);
+  bottom: 0;
+  position: absolute;
+  left: 8%;
+  display: flex;
+}
+
+.projectDetails {
+  padding: 1rem 0;
+}
+
+.projectTitle {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.projectTitlesLine {
+  width: 100%;
+  height: 1px;
+  background: var(--lightest-navy);
+}
+
+.projectDetails h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.projectDetails p {
+  margin: 0 0 1rem 0;
+  color: #666;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.8rem 0;
+  gap: 1.2rem;
+  font-size: var(--text-xs);
+  color: var(--brand);
+  margin: 0.8rem 0;
+}
+
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: var(--text-xs);
+  color: var(--brand);
+  margin: 0.8rem 0;
 }

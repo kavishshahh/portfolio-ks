@@ -15,6 +15,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
+  overflow: auto;
 
   @media (max-width: 480px) {
     font-size: var(--fz-lg);
@@ -22,6 +23,7 @@ body {
 }
 
 :root {
+  --brand: #0aff9d;
   --dark-navy: #020c1b;
   --navy: #0a192f;
   --light-navy: #112240;
@@ -46,6 +48,7 @@ body {
   --fz-lg: 18px;
   --fz-xl: 20px;
   --fz-xxl: 22px;
+  --text-2xl: 5rem;
   --fz-heading: 32px;
   --border-radius: 4px;
   --nav-height: 100px;
