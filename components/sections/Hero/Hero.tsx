@@ -24,8 +24,8 @@ const Hero = () => {
       <h2>Kavish Shah.</h2>
       <h3>I build things for the web.</h3>
       <p className={styles.pStyle}>
-        I’m a software engineer building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building Products for Web3.
+        I’m a recently graduated Engineer currently working as a Software Engineer. I occasionally
+        participate in hackathons for fun.
       </p>
       <a
         className={styles.emailLink}

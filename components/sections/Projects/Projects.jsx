@@ -25,7 +25,7 @@ const Projects = () => {
               <div className={styles.projectTitle}>
                 <h4>{project.name}</h4>
                 <div className={styles.projectTitlesLine}></div>
-                <a href="https://github.com/kavishshahh/gopulse">
+                <a href={project.link}>
                   <GithubIcon />
                 </a>
               </div>
