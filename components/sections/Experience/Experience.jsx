@@ -7,7 +7,7 @@ const Experience = () => {
   const jobs = {
     ring1: {
       id: 0,
-      title: "Software Developer Trainee",
+      title: "Software Developer",
       company: "Ring",
       date: "Jul 2024 - Present",
       responsibilities: [
