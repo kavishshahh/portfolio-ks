@@ -3,15 +3,21 @@ import React from "react";
 const MailIcon = () => {
   return (
     <svg
-      stroke="currentColor"
-      fill="currentColor"
-      stroke-width="0"
-      viewBox="0 0 1024 1024"
-      height="1.8rem"
-      width="2.4rem"
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="far"
+      data-icon="envelope"
+      className="svg-inline--fa fa-envelope text-xl"
+      role="img"
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      height="1.5rem"
+      width="2rem"
     >
-      <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 0 1 194 256h648.8a7.2 7.2 0 0 1 4.4 12.9z"></path>
+      <path
+        fill="currentColor"
+        d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+      ></path>
     </svg>
   );
 };

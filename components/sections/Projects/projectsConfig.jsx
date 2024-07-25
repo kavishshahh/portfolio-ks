@@ -9,7 +9,7 @@ const projects = [
   },
   {
     name: "Samvad",
-    image: "/gopulse.png",
+    image: "/samvad.png",
     link: "https://github.com/KryptoNights/samvad",
     tags: ["Typescript", "Solidity", "CSS"],
     description:
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     name: "BuildFi",
-    image: "/gopulse.png",
+    image: "/buildfi.png",
     link: "https://github.com/KryptoNights/BuildFi",
     tags: ["Typescript", "Solidity", "CSS"],
     description:
