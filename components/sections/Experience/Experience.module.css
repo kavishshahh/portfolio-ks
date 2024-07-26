@@ -33,7 +33,7 @@
   background-color: var(--lightest-navy);
 }
 
-.styledSection section {
+.styledSection {
   visibility: visible;
   opacity: 1;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -44,7 +44,7 @@
   display: block;
   unicode-bidi: isolate;
   max-width: 900px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .inner {
