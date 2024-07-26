@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Experience.module.css";
 
 const Experience = () => {
-  const [selectedJob, setSelectedJob] = useState("ring1");
+  const [selectedJob, setSelectedJob] = useState("0");
+  console.log("slectd", selectedJob);
+  const [transformDirection, setTransformDirection] = useState("translateY");
 
-  const jobs = {
-    ring1: {
+  const jobs = [
+    {
       id: 0,
       title: "Software Developer",
       company: "Ring",
@@ -16,7 +18,7 @@ const Experience = () => {
         "Developed various components and features of frontend by understanding the design and fixing bugs.",
       ],
     },
-    ring2: {
+    {
       id: 1,
       title: "Software Developer Intern",
       company: "Ring",
@@ -26,57 +28,73 @@ const Experience = () => {
         "Collaborated with designers, project managers, and other engineers to transform creative concepts into production realities.",
       ],
     },
-  };
+  ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setTransformDirection("translateX");
+      } else {
+        setTransformDirection("translateY");
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={styles.styledSection}>
       <section>
         <h2 className={styles.styledExp}>Experience</h2>
         <div className={styles.inner}>
-          <div>
-            <button
-              className={`${styles.styledButton} ${
-                selectedJob === "ring1" ? styles.active : ""
-              }`}
-              onClick={() => setSelectedJob("ring1")}
-            >
-              Ring
-            </button>
-            <button
-              className={`${styles.styledButton} ${
-                selectedJob === "ring2" ? styles.active : ""
-              }`}
-              onClick={() => setSelectedJob("ring2")}
-            >
-              Ring / Kissht
-            </button>
+          <div className={styles.tabsDiv}>
+            {Object.keys(jobs).map((jobKey) => (
+              <button
+                key={jobKey}
+                className={`${styles.styledButton} ${
+                  selectedJob === jobKey ? styles.active : ""
+                }`}
+                onClick={() => setSelectedJob(jobKey)}
+              >
+                {jobs[jobKey].company}
+              </button>
+            ))}
             <div
               className={styles.selected}
               style={{
-                transform: `translateY(calc(${jobs[selectedJob].id} * var(--tab-height)))`,
+                transform: `${
+                  transformDirection === "translateY"
+                    ? `translateY(calc(${jobs[selectedJob].id} * var(--tab-height)))`
+                    : `translateX(calc(${jobs[selectedJob].id} * var(--tab-width)))`
+                }`,
               }}
             ></div>
           </div>
           <div>
-            {selectedJob && (
-              <div className={styles.styledInner}>
-                <h3>
-                  <span>{jobs[selectedJob].title}</span>
-                  <span className={styles.company}>&nbsp;@&nbsp;</span>
-                  <a href="" className={styles.company}>
-                    {jobs[selectedJob].company}
-                  </a>
-                </h3>
-                <p className={styles.date}>{jobs[selectedJob].date}</p>
-                <div>
-                  <ul>
-                    {jobs[selectedJob].responsibilities.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+            <div className={styles.styledInner}>
+              <h3>
+                <span>{jobs[selectedJob].title}</span>
+                <span className={styles.company}>&nbsp;@&nbsp;</span>
+                <a href="" className={styles.company}>
+                  {jobs[selectedJob].company}
+                </a>
+              </h3>
+              <p className={styles.date}>{jobs[selectedJob].date}</p>
+              <div>
+                <ul>
+                  {jobs[selectedJob].responsibilities.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </section>

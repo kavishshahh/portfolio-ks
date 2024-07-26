@@ -55,6 +55,16 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+.tabsDiv {
+  @media (max-width: 600px) {
+    display: flex;
+  }
 }
 
 .tabsList {
@@ -79,6 +89,14 @@
   font-size: var(--fz-xs);
   text-align: left;
   white-space: nowrap;
+
+  @media (max-width: 600px) {
+    transition: var(--transition);
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    border-top: 2px solid var(--green);
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  }
 }
 
 .styledButton {
@@ -109,9 +127,22 @@
   width: 2px;
   height: var(--tab-height);
   border-radius: var(--border-radius);
+  /* width: var(--tab-width); */
   background: var(--green);
-  transform: translateY(calc(0 * var(--tab-height)));
+  /* transform: translateX(calc(0 * var(--tab-height))); */
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+
+  @media (max-width: 600px) {
+    display: none;
+    /* position: absolute;
+    bottom: 0;
+    left: 0px;
+    z-index: 10;
+    height: 2px;
+    border-radius: var(--border-radius);
+    background: var(--green);
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s; */
+  }
 }
 
 .styledInner {
