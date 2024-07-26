@@ -22,7 +22,7 @@ const Experience = () => {
       id: 1,
       title: "Software Developer Intern",
       company: "Ring",
-      date: "Jul 2023 - Aug 2024",
+      date: "Jul 2023 - Aug 2023",
       responsibilities: [
         "As a Software Developer, I developed a portal for the company’s team. My responsibility was on utilizing various technologies such as React, Redux, Tailwind CSS, Axios, and Golang to build a robust and user-friendly platform.",
         "Collaborated with designers, project managers, and other engineers to transform creative concepts into production realities.",
