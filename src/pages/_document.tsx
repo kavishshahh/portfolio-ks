@@ -13,6 +13,7 @@ export default function Document() {
           name="keywords"
           content="Kavish, Shah, Software Engineer, Web3, Blockchain, ETH India, Scaling Ethereum, Portfolio, Eth Global"
         />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="google-site-verification"
