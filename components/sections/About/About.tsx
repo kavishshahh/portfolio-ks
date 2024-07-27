@@ -15,12 +15,13 @@ const About = () => {
           <div>
             <div className={styles.styledP}>
               <p>
-                Hello! My name is Kavish and I enjoy creating things that live
-                on the internet.
+                Hey! I'm is Kavish, I'm a Electronics and Telecommunication
+                Engineering graduate with a passion for coding and exploring new
+                technologies.
               </p>
               <p>
-                I started building when i was 17 and today i have learned a few
-                things which has helped me in my career.
+                Presently, I'm a Software Engineer at Ring, where I focus on
+                implementing and adding new features.
               </p>
               <p>
                 As I continue to explore new technologies and push the
@@ -33,25 +34,26 @@ const About = () => {
               </p>
             </div>
             <div className={styles.styledText}>
-            <ul className={styles.skills}>
-              <li>JavaScript (ES6+)</li>
-              <li>React</li>
-              <li>Next</li>
-              <li>Solidity</li>
-              <li>Golang</li>
-              <li>Typescript</li>
-            </ul>
-          </div>
+              <ul className={styles.skills}>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Solidity</li>
+                <li>Golang</li>
+                <li>Typescript</li>
+              </ul>
+            </div>
           </div>
           <div className={styles.aboutPic}>
             <div className={styles.wrapper}>
-              <img src="/ethpic.jpeg" alt="photo of kavish shah" className={styles.wrapperimg}/>
+              <img
+                src="/ethpic.jpeg"
+                alt="photo of kavish shah"
+                className={styles.wrapperimg}
+              />
             </div>
           </div>
-
-          
         </div>
-
       </section>
     </div>
   );

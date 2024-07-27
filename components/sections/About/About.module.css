@@ -105,12 +105,15 @@
 .wrapperimg {
   position: relative;
   border-radius: var(--border-radius);
-
   transition: var(--transition);
 }
 
 .styledP p {
-  padding: 0 0 10px;
+  padding: 0 0 30px;
+}
+
+.styledP p:last-child {
+  padding: 0 0 15px;
 }
 
 .styledText .skills {
