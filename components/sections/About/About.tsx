@@ -11,7 +11,7 @@ const About = () => {
             <h2>About Me</h2>
           </div>
         </div>
-        <div className="inner">
+        <div className={styles.inner}>
           <div>
             <div className={styles.styledP}>
               <p>
@@ -28,11 +28,11 @@ const About = () => {
                 on new challenges and contribute to groundbreaking projects that
                 make a difference.
               </p>
-              <p>Here are a few technologies I’ve been working with recently:</p>
+              <p>
+                Here are a few technologies I’ve been working with recently:
+              </p>
             </div>
-          </div>
-
-          <div className={styles.styledText}>
+            <div className={styles.styledText}>
             <ul className={styles.skills}>
               <li>JavaScript (ES6+)</li>
               <li>React</li>
@@ -42,10 +42,16 @@ const About = () => {
               <li>Typescript</li>
             </ul>
           </div>
+          </div>
+          <div className={styles.aboutPic}>
+            <div className={styles.wrapper}>
+              <img src="/ethpic.jpeg" alt="" className={styles.wrapperimg}/>
+            </div>
+          </div>
+
+          
         </div>
-        <div className="right">
-          <div></div>
-        </div>
+
       </section>
     </div>
   );
