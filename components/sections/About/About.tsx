@@ -45,7 +45,7 @@ const About = () => {
           </div>
           <div className={styles.aboutPic}>
             <div className={styles.wrapper}>
-              <img src="/ethpic.jpeg" alt="" className={styles.wrapperimg}/>
+              <img src="/ethpic.jpeg" alt="photo of kavish shah" className={styles.wrapperimg}/>
             </div>
           </div>
 
