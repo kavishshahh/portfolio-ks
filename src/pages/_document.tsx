@@ -4,14 +4,14 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Kavish | Software Engineer | Web3 | Blockchain</title>
+        <title>Kavish | Software Developer</title>
         <meta
           name="description"
-          content="Kavish Shah is a Software Engineer with hackathon wins like ETH India 2023 and Scaling Ethereum 2024. Specializes in Web3 and Blockchain technologies."
+          content="A software Developer specializing in Frontend and a part time Founder"
         />
         <meta
           name="keywords"
-          content="Kavish, Shah, Software Engineer, Web3, Blockchain, ETH India, Scaling Ethereum, Portfolio, Eth Global"
+          content="Kavish, Shah, Software Engineer, Web3, Blockchain, ETH India, Scaling Ethereum, Portfolio, Eth Global, Nexus, Nexus Paylink, payments"
         />
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
@@ -20,6 +20,15 @@ export default function Document() {
           name="google-site-verification"
           content="NqX5mc07r18m3it3uZ5VvRW_mkz7NmFQ5r6ZZM8IRGk"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@kavishshahh" />
+        <meta name="twitter:creator" content="@kavishshahh" />
+        <meta name="twitter:title" content="Software Developer"/>
+        <meta
+          name="twitter:image"
+          content="https://www.imghippo.com/i/TUSb3244bo.png"
+        />
+        <meta name="twitter:url" content="kavish.vercel.app"/>
       </Head>
       <body>
         <Main />
