@@ -1,18 +1,20 @@
 // components/Layout.js
-import React, { useRef } from "react";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import Nav from "../Nav/Nav";
 import About from "../sections/About/About";
-import styles from "./Layout.module.css";
-import Hero from "../sections/Hero/Hero";
-import Experience from "../sections/Experience/Experience";
-import Projects from "../sections/Projects/Projects";
+import Achievements from "../sections/Achievements/Achievements";
 import Contact from "../sections/Contact/Contact";
+import Experience from "../sections/Experience/Experience";
+import Hero from "../sections/Hero/Hero";
+import Projects from "../sections/Projects/Projects";
+import styles from "./Layout.module.css";
 
 const Layout = () => {
   const router = useRouter();
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const achievementsRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
@@ -29,6 +31,7 @@ const Layout = () => {
   const refs = {
     heroRef,
     aboutRef,
+    achievementsRef,
     experienceRef,
     projectsRef,
     contactRef,
@@ -43,6 +46,9 @@ const Layout = () => {
         </div>
         <div ref={aboutRef}>
           <About />
+        </div>
+        <div ref={achievementsRef}>
+          <Achievements />
         </div>
         <div ref={experienceRef}>
           <Experience />

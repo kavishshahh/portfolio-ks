@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import { useEffect, useState } from "react";
 import { navLinks } from "../../src/config";
-import styles from "./Nav.module.css";
 import Menu from "../menu/Menu";
+import styles from "./Nav.module.css";
 
 const Nav = ({ scrollToRef, refs }: { scrollToRef: any; refs: any }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,6 +43,9 @@ const Nav = ({ scrollToRef, refs }: { scrollToRef: any; refs: any }) => {
         break;
       case "#jobs":
         scrollToRef(refs.experienceRef);
+        break;
+      case "#achievements":
+        scrollToRef(refs.achievementsRef);
         break;
       case "#projects":
         scrollToRef(refs.projectsRef);

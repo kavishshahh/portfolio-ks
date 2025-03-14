@@ -1,5 +1,5 @@
 // components/Hero.js
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -22,10 +22,10 @@ const Hero = () => {
     <section className={styles.heroSection} style={dynamicStyle}>
       <h1>Hi, my name is</h1>
       <h2>Kavish Shah.</h2>
-      <h3>I'm a Software Engineer.</h3>
+      <h3>I build things for the web.</h3>
       <p className={styles.pStyle}>
-        I’m a recently graduated Engineer currently working as a Software Engineer. I occasionally
-        participate in hackathons for fun.
+        I'm a Software Engineer passionate about building innovative solutions. I specialize in full-stack development
+        and enjoy creating impactful applications that solve real-world problems.
       </p>
       <a
         className={styles.emailLink}

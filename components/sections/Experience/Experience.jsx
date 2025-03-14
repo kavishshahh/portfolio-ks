@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Experience.module.css";
 
 const Experience = () => {
@@ -10,22 +10,22 @@ const Experience = () => {
     {
       id: 0,
       title: "Software Developer",
-      company: "Ring",
+      company: "Kissht",
       date: "Jul 2024 - Present",
       responsibilities: [
-        `Developed and maintained advanced infrastructure tools using React.js, ensuring industry-standard compliance. Proficient in
-        React.js, Redux, and front-end development`,
-        "Developed various components and features of frontend by understanding the design and fixing bugs.",
+        "Develop and maintain backend APIs using Python and Golang, ensuring high performance and scalability",
+        "Implement new features including bulk upload functionality by using Redis to process data in sequence",
+        "Collaborate with cross-functional teams to design and implement robust backend solutions",
       ],
     },
     {
       id: 1,
       title: "Software Developer Intern",
-      company: "Ring",
+      company: "Kissht",
       date: "Jul 2023 - Aug 2023",
       responsibilities: [
-        "As a Software Developer, I developed a portal for the company’s team. My responsibility was on utilizing various technologies such as React, Redux, Tailwind CSS, Axios, and Golang to build a robust and user-friendly platform.",
-        "Collaborated with designers, project managers, and other engineers to transform creative concepts into production realities.",
+        "Developed and maintained advanced infrastructure tools using React.js, ensuring industry-standard compliance",
+        "Developed various components and features of frontend by understanding the design and fixing bugs"
       ],
     },
   ];

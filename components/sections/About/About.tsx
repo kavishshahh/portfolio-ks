@@ -1,5 +1,4 @@
 // components/About.js
-import React from "react";
 import styles from "./About.module.css";
 
 const About = () => {
@@ -15,39 +14,41 @@ const About = () => {
           <div>
             <div className={styles.styledP}>
               <p>
-                Hey! I'm is Kavish, I'm a Electronics and Telecommunication
-                Engineering graduate with a passion for coding and exploring new
-                technologies.
+                Hey! I'm Kavish, a Software Engineer with a background in Electronics and Telecommunication
+                Engineering. I combine my technical foundation with a passion for software development to create
+                innovative solutions.
               </p>
               <p>
-                Presently, I'm a Software Engineer at Ring, where I focus on
-                implementing and adding new features.
+                Currently, I'm working as a Software Engineer at Ring, where I develop and enhance features
+                that improve user experience and security. Beyond this role, I'm also the founder of Orbital Pay,
+                developing innovative payment solutions that combine technical expertise with business acumen.
               </p>
               <p>
-                As I continue to explore new technologies and push the
-                boundaries of what's possible on the web, I'm excited to embark
-                on new challenges and contribute to groundbreaking projects that
-                make a difference.
+                I'm constantly learning and exploring new technologies to stay at the forefront of software
+                development, particularly interested in building applications that have a meaningful impact
+                on users' lives.
               </p>
               <p>
-                Here are a few technologies I’ve been working with recently:
+                Here are a few technologies I've been working with recently:
               </p>
             </div>
             <div className={styles.styledText}>
               <ul className={styles.skills}>
                 <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
+                <li>AWS</li>
                 <li>Next.js</li>
-                <li>Solidity</li>
+                <li>Python</li>
                 <li>Golang</li>
                 <li>Typescript</li>
+                <li>Redis</li>
+                <li>Docker</li>
               </ul>
             </div>
           </div>
           <div className={styles.aboutPic}>
             <div className={styles.wrapper}>
               <img
-                src="/ethpic.jpeg"
+                src="/singaporepic.jpg"
                 alt="photo of kavish shah"
                 className={styles.wrapperimg}
               />

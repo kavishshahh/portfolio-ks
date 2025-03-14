@@ -15,7 +15,7 @@
 
 .styledExp::before {
   position: relative;
-  counter-increment: section 2;
+  counter-increment: section 3;
   content: "0" counter(section) ".";
   margin-right: 10px;
   color: var(--green);

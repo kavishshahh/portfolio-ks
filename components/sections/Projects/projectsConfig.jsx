@@ -1,5 +1,21 @@
 const projects = [
   {
+    name: "Orbital Pay",
+    image: "/orbital-pay.jpg",
+    link: "https://app.orbitalpay.xyz/",
+    tags: ["Next.js", "Web3", "Aptos"],
+    description:
+      "A decentralized payment solution that facilitates secure and instant cross-border transactions using StableCoins and blockchain technology.",
+  },
+  {
+    name: "Orbital Bridges",
+    image: "/orbital-bridges.png",
+    link: "https://bridges.orbitalpay.xyz/",
+    tags: ["Next.js", "Web3", "Aptos"],
+    description:
+      "A cross-chain bridge implementation that enables seamless token transfers between different blockchain networks. Built with security and efficiency in mind.",
+  },
+  {
     name: "Gopulse",
     image: "/gopulse.png",
     link: "https://github.com/kavishshahh/gopulse",
