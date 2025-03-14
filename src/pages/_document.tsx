@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -7,11 +7,11 @@ export default function Document() {
         <title>Kavish | Software Developer</title>
         <meta
           name="description"
-          content="A software Developer specializing in Frontend and a part time Founder"
+          content="A software Developer specializing in Full Stack Development and Founder of Orbital Pay"
         />
         <meta
           name="keywords"
-          content="Kavish, Shah, Software Engineer, Web3, Blockchain, ETH India, Scaling Ethereum, Portfolio, Eth Global, Nexus, Nexus Paylink, payments"
+          content="Kavish, Shah, Software Engineer, Web3, Blockchain, ETH India, Scaling Ethereum, Portfolio, Eth Global, Nexus, Nexus Paylink, payments, Orbital Pay"
         />
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
@@ -23,12 +23,12 @@ export default function Document() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@kavishshahh" />
         <meta name="twitter:creator" content="@kavishshahh" />
-        <meta name="twitter:title" content="Software Developer"/>
+        <meta name="twitter:title" content="Founder | Software Developer | Kavish Shah"/>
         <meta
           name="twitter:image"
           content="https://www.imghippo.com/i/TUSb3244bo.png"
         />
-        <meta name="twitter:url" content="kavish.vercel.app"/>
+        <meta name="twitter:url" content="https://kavish.vercel.app"/>
       </Head>
       <body>
         <Main />
